@@ -1,0 +1,51 @@
+### POST request
+POST http://localhost:10000/users
+Content-Type: application/json
+
+{}
+
+> {%
+client.test("Request executed successfully", function() {
+  client.assert(response.status === 201, "Response status is not 201");
+});
+%}
+
+### PUT request
+
+PUT http://localhost:10000/users/1
+Content-Type: application/json
+
+{}
+
+> {%
+client.test("Request executed successfully", function() {
+  client.assert(response.status === 204, "Response status is not 204");
+});
+%}
+
+### PATCH request
+
+PATCH http://localhost:10000/users/1
+Content-Type: application/json
+
+{}
+
+> {%
+client.test("Request executed successfully", function() {
+  client.assert(response.status === 204, "Response status is not 204");
+});
+%}
+
+### DELETE request
+
+DELETE http://localhost:10000/users/1
+Content-Type: application/json
+
+{}
+
+> {%
+client.test("Request executed successfully", function() {
+  client.assert(response.status === 204, "Response status is not 204");
+});
+%}
+
